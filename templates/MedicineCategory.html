@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+    <title>
+
+        Medicines
+
+    </title>
+
+    <script src="https://kit.fontawesome.com/5471644867.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Medicine Category Page CSS.css') }}">
+    
+    <link rel="shortcut icon" type="image/jpg" href="C:\Users\hp\Desktop\College\First Semester\Introduction To Web Technologies\Notepad ++ Files\Project\favicon.ico"/>
+
+    <body>
+
+        <section id="popular-product">
+            <form action="{{url_for('st')}}" method="post">
+            <!--heading----------->
+            <div class="product-heading">
+                <input type="text" id="te1" name="te1" value="Medicines" readonly style="border: 0ch; size: 15px;">
+            </div>
+            <div class="sele">
+            
+                <label for="comp">LOCATIONS</label><br>
+                <select style=" background-color: rgb(184, 29, 177); border: 15px;" id="s1" name="s1" >
+                    <option value="pilathara">pilathara</option>
+                    <option value="payyannur">PAYYANNUR</option>
+                    
+                </select><br>
+            </div>
+            <!--box-container------>
+            <div class="product-container">
+                <!--box---------->
+                <div class="product-box" style = "height: 95%;">
+                    <img alt="Cetirizine" src="{{ url_for('static',filename='images/Cetirizine.jpg') }}">
+                    <strong>Cetirizine 10mg</strong>
+                    <span class="quantity">10 Tablets</span>
+                    <span class="price">Rs. 16.10</span>
+                    <!--cart-btn------->
+                    
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="CUFRIL-D Cough Syrup" src="{{ url_for('static',filename='images/CUFRIL-D cough syrup.jpg') }}"">
+                    <strong>CUFRIL-D Cough Syrup</strong>
+                    <span class="quantity"></span>
+                    <span class="price">Rs. 88</span>
+                    <!--cart-btn------->
+                    
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box" style="height: 95%;">
+                    <img alt="Cheston Cold" src="{{ url_for('static',filename='images/Cheston Cold.jpg') }}">
+                    <strong>Cheston Cold </strong>
+                    <span class="quantity">10 Tablets</span>
+                    <span class="price">Rs. 34</span>
+                    <!--cart-btn------->
+                    
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="Dolo 650" src="{{ url_for('static',filename='images/Dolo.jpg') }}">
+                    <strong>Dolo 650</strong>
+                    <span class="quantity">15 Tablets</span>
+                    <span class="price">Rs. 24.75</span>
+                    <!--cart-btn------->
+                    
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="Metolar XR 50" src="{{ url_for('static',filename='images/Metolar XR 50.jpg') }}">
+                    <strong>Metolar XR 50</strong>
+                    <span class="quantity">15 Tablets</span>
+                    <span class="price">Rs. 77.66</span>
+                    <!--cart-btn------->
+                    
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="Gelusil Tablets" src="{{ url_for('static',filename='images/Gelusil 1.jpg') }}">
+                    <strong>Gelusil Chewable Tablets</strong>
+                    <span class="quantity">10 Tablets</span>
+                    <span class="price">Rs. 15.92</span>
+                    <!--cart-btn------->
+                    
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="wrapper">
+                <button class="">
+                  <span>Submit</span>
+                  <div class="success">
+                 
+                    </div>
+                </button>
+              </div>
+        </form>
+        </section>
+
+    </body>
+
+</html>

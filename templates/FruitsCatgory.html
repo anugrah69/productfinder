@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+
+    <title>
+
+        Fruits and Vegetables
+
+    </title>
+
+    <script src="https://kit.fontawesome.com/5471644867.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Fruits Category Page CSS.css') }}">
+    
+    <link rel="shortcut icon" type="image/jpg" href="C:\Users\hp\Desktop\College\First Semester\Introduction To Web Technologies\Notepad ++ Files\Project\favicon.ico"/>
+
+    <body>
+
+        <section id="popular-product">
+            <form action="{{url_for('st')}}" method="post">
+            <!--heading----------->
+            <div class="product-heading">
+                 <input type="text" id="te1" name="te1" value="fruitsandvegetables" readonly style="border: 0ch; size: 15px;">
+            </div>
+            <div class="sele">
+            
+                <label for="comp">LOCATIONS</label><br>
+                <select style=" background-color: #973abf; border: 15px;" id="s1" name="s1" >
+                    <option value="pilathara">pilathara</option>
+                    <option value="payyannur">payyannur</option>
+                    
+                </select><br>
+            <!--box-container------>
+          
+            </div>
+            <div class="product-container">
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="apple" src="{{ url_for('static',filename='images/images/apple.png') }}">
+                    <strong>Apple</strong>
+                    <span class="quantity">1 KG</span>
+                    <span class="price">Rs. 100</span>
+                    <!--cart-btn------->
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="chili" src="{{ url_for('static',filename='images/images/chili.png') }}">
+                    <strong>Chili</strong>
+                    <span class="quantity">1 KG</span>
+                    <span class="price">Rs. 80</span>
+                    <!--cart-btn------->
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="apple" src="{{ url_for('static',filename='images/images/onion.png') }}">
+                    <strong>Onion</strong>
+                    <span class="quantity">1 KG</span>
+                    <span class="price">Rs. 50</span>
+                    <!--cart-btn------->
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="apple" src="{{ url_for('static',filename='images/images/patato.png') }}">
+                    <strong>Potato</strong>
+                    <span class="quantity">1 KG</span>
+                    <span class="price">Rs. 60</span>
+                    <!--cart-btn------->
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="oranges" src="{{ url_for('static',filename='images/Oranges.jpg') }}">
+                    <strong>Oranges</strong>
+                    <span class="quantity">1 KG</span>
+                    <span class="price">Rs. 80</span>
+                    <!--cart-btn------->
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="apple" src="{{ url_for('static',filename='images/images/tamato.png') }}">
+                    <strong>Tomato</strong>
+                    <span class="quantity">1 KG</span>
+                    <span class="price">Rs. 80</span>
+                    <!--cart-btn------->
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="wrapper">
+                <button class="">
+                  <span>Submit</span>
+                  <div class="success">
+                 
+                    </div>
+                </button>
+              </div>
+        </form>
+        </section>
+
+    </body>
+
+</html>

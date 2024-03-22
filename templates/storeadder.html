@@ -1,0 +1,39 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='storeadder.css') }}">
+  <title>Registration Form Using HTML/CSS</title>
+</head>
+<body>
+<form action="{{ url_for('admin') }}" method="post">
+    <div class="form-group">
+      <input id="storename" name="storename" type="text" placeholder="Enter Your storename" class="textbox"/>
+    </div>
+    <div class="form-group">
+      <input id="owner" name="owner" type="text" placeholder="Enter your owner name" class="textbox"/>
+    </div>
+    <div class="form-group">
+      <input id="product" name="product" type="text" placeholder="enter youre product category" class="textbox"/>
+    </div>
+      <div class="form-group">
+        <input id="place" name="place" type="text" placeholder="Enter your place" class="textbox"/>
+      </div>
+      <div class="form-group">
+        <input id="phoneno" name="phoneno" type="text" placeholder="enter youre phoneno" class="textbox"/>
+      </div>
+      <div class="form-group">
+        <input id="address" name="address" type="text" placeholder="enter youre address" class="textbox"/>
+      </div>
+      <div class="form-group">
+        <input id="productname" name="productname" type="text" placeholder="enter youre product name" class="textbox"/>
+      </div>
+    <input type="submit"  name="Sign Up" value="ADD">
+
+
+</body>
+
+
+</html>

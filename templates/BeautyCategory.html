@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+    <title>
+
+        Beauty Products
+
+    </title>
+
+    <script src="https://kit.fontawesome.com/5471644867.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='Beauty Category Page CSS.css')}}">
+    
+    <link rel="shortcut icon" type="image/jpg" href="C:\Users\hp\Desktop\College\First Semester\Introduction To Web Technologies\Notepad ++ Files\Project\favicon.ico"/>
+
+    <body>
+
+        <section id="popular-product">
+            <form action="{{url_for('st')}}" method="post">
+            <!--heading----------->
+            <div class="product-heading">
+                <input type="text" id="te1" name="te1" value="BeautyProducts" readonly style="border: 0ch; size: 15px;">
+            </div>
+            <div class="sele">
+            
+                <label for="comp">LOCATIONS</label><br>
+                <select style=" background-color: rgb(184, 29, 177); border: 15px;" id="s1" name="s1" >
+                    <option value="pilathara">pilathara</option>
+                    <option value="SNAP">PAYYANNUR</option>
+                    
+                </select><br>
+            </div>
+            <!--box-container------>
+            <div class="product-container">
+                <!--box---------->
+                <div class="product-box" style = "height: 95%;">
+                    <img alt="Lakme Blush and Glow Face Wash" src="{{ url_for('static',filename='images/Lakme Facewash.jpg') }}">
+                    <strong>Lakme Blush and Glow Face Wash</strong>
+                    <span class="quantity">100 g</span>
+                    <span class="price">Rs. 144</span>
+                    <!--cart-btn------->
+                    
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box" style="height: 95%;">
+                    <img alt="Ponds Men Pollution Out Facewash" src="{{ url_for('static',filename='images/Men Face Wash.jpg') }}">
+                    <strong>Ponds Men Pollution Out Facewash</strong>
+                    <span class="quantity">100 g</span>
+                    <span class="price">Rs. 159</span>
+                    <!--cart-btn------->
+                    
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box" style="height: 95%;">
+                    <img alt="Nivea Body Milk" src="{{ url_for('static',filename='images/Moisturizer.jpg') }}">
+                    <strong>Nivea Body Milk</strong>
+                    <span class="quantity">200 ml</span>
+                    <span class="price">Rs. 178</span>
+                    <!--cart-btn------->
+                    
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="Nivea Lip Balm" src="{{ url_for('static',filename='images/Lip Balm.jpg') }}">
+                    <strong>Nivea Lip Balm</strong>
+                    <span class="quantity">1</span>
+                    <span class="price">Rs. 151</span>
+                    <!--cart-btn------->
+                    
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="Berado Hair Growth Oil" src="{{ url_for('static',filename='images/Beard Oil.jpg') }}">
+                    <strong>Berado Hair Growth Oil</strong>
+                    <span class="quantity">50 ml</span>
+                    <span class="price">Rs. 585</span>
+                    <!--cart-btn------->
+                    
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="Olay Total Effects Day Cream" src="{{ url_for('static',filename='images/Face Cream.jpg') }}">
+                    <strong>Olay Total Effects Day Cream</strong>
+                    <span class="quantity">50 g</span>
+                    <span class="price">Rs. 749</span>
+                    <!--cart-btn------->
+                    
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="wrapper">
+                <button class="">
+                  <span>Submit</span>
+                  <div class="success">
+                 
+                    </div>
+                </button>
+              </div>
+        </form>
+        </section>
+
+    </body>
+
+</html>

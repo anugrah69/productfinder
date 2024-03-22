@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet"  href="{{ url_for('static', filename='view.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+    <section>
+        <!--for demo wrap-->
+        <h1>AVAILABLE STORES</h1>
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+                <table>{% for row in data %}
+              <tr>
+                <th>storename</th>
+                <th>owner</th>
+                <th>product</th>
+                <th>place</th>
+                <th>phoneno</th>
+                <th>address</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+              <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+
+                     </tr>
+                     {% endfor %}
+                     
+                     <a href="https:/wa.me/919400456825"  target="_blank" class="whatsapp_float"><i class="fa-brands fa-whatsapp whatsapp-icon"></i></a>
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <div class = "content-section">
+      <h1 style = "font-family: 'Poppins', sans-serif;">
+
+        <p>Place Your Order :</p>
+       </h1></div>
+      
+     
+     
+    </body>
+</html>

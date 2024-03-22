@@ -1,0 +1,541 @@
+<DOCTYPE html>
+
+<html>
+
+    <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--==Title==================================-->
+    <title>
+
+        product finder
+
+    </title>
+
+    <!--==Stylesheet=============================-->
+    <link rel="stylesheet"  href="{{ url_for('static', filename='Home Page CSS.css') }}">
+</head>
+
+    <!--==Fav-icon===============================-->
+    <link rel="shortcut icon" href="{{ url_for('static',filename='images/fav-icon.png') }}"/>
+
+    <!--==Using-Font-Awesome=====================-->
+    <script type="text/javascript" src="{{url_for('static',filename='Home Page JS.js')}}" ></script>
+
+    <script src = "{{url_for('static',filename='Home Page JS.js')}}" defer></script>
+	    
+   <link rel="shortcut icon" type="image/jpg" href="C:\Users\hp\Desktop\College\First Semester\Introduction To Web Technologies\Notepad ++ Files\Project\favicon.ico"/>
+
+    </head>
+
+    <body>
+
+        <!--==Navigation================================-->
+        <form action="{{url_for('cart')}}" method="post"></form>
+        <nav class="navigation">
+
+            <!--logo-------->
+            <a href="#" class="logo">
+
+                <span>product</span>finder
+
+            </a>
+
+            <!--menu-btn---->
+            <input type="checkbox" class="menu-btn" id="menu-btn">
+
+            <label for="menu-btn" class="menu-icon">
+
+                <span class="nav-icon"></span>
+
+            </label>
+
+            <!--menu-------->
+            <ul class="menu">
+
+                <li>
+                    <a href="{{url_for('user')}}" class="active">
+                        
+                        Home
+
+                    </a>
+                
+                </li>
+
+                <li>
+
+                    <a href="#category">
+
+                        Categories
+                    
+                    </a>
+                
+                </li>
+
+                <li>
+
+                    <a href="#popular-bundle-pack">
+                        
+                        on offer
+                    
+                    </a>
+                
+                </li>
+
+                <li>
+                    
+                    <a href="{{url_for('fd')}}">Feedback</a>
+                        
+                       
+                    
+                
+                
+                </li>
+				
+				
+				<li>
+
+					<a href="{{url_for('AboutUs')}}">About&nbsp;us</a>
+
+						
+
+					</a>
+
+                </li>
+
+                <li>
+                    
+                
+                </li>
+
+                <li>
+                    
+                    <a href="{{ url_for('login')}}">
+                            
+                        Sign&nbsp;up
+                        
+                    </a>
+                    
+                </li>
+
+                
+                <li>
+                    
+                    <a href="{{ url_for('login') }}">
+                        
+                        Login
+                    
+                    </a>
+                
+                </li>
+
+				</ul>
+
+            <!--right-nav-(cart-like)-->
+                <!--cart----->
+                
+            </div>
+
+        </nav>
+
+        <!--nav-end--------------------->
+        <!--==Search-banner=======================================-->
+        <section id="search-banner">
+
+            <!--bg--------->
+            <img alt="bg" class="bg-1" src="{{ url_for('static',filename='images/images/bg-1.png') }}">
+
+            <img alt="bg" class="bg-1_rev" src="{{ url_for('static',filename='images/images/bg-1.png') }}">
+
+            <img alt="bg-2" class="bg-2" src="{{ url_for('static',filename='images/images/bg-2.png') }}">
+
+            <!--text------->
+            <div class="search-banner-text">
+
+                <h1>
+                    
+                    Find Your Product
+                
+                </h1>
+
+                <!--search-box------>
+                <form action="{{url_for('sear')}}" class="search-box" method="post" >
+
+                    <!--icon------>
+                    <i class="fas fa-search"></i>
+
+                    <!--input----->
+                    <input type="text" class="search-input" placeholder="Search" id="search" name="search"  size = "80px" required>
+
+                    <!--btn------->
+                    <input type="submit" class="search-btn" value="Search">
+
+                </form>
+
+                <br>
+
+            </div>
+
+        </section>
+
+        <!--search-banner-end--------------->
+
+
+ 
+
+        <!--==category=========================================-->
+        <section id="category">
+
+            <!--heading---------------->
+            <div class="category-heading">
+
+                <h2>
+                    
+                    Category
+                
+                </h2>
+
+                <span>
+                    
+                    All
+                
+                </span>
+
+            </div>
+
+            <!--box-container---------->
+            <div class="category-container">
+
+                <!--box---------------->
+                <a class="category-box" href = "{{ url_for('FruitsCatgory') }}">
+					<img alt="Fruits and Vegetables" src="{{ url_for('static',filename='images/images/Vegetables.png') }}">
+					<span>Fruits & <br> Vegetables</span>
+				</a>
+				<!--box---------------->
+                <a class="category-box" href = "{{ url_for('MedicineCategory') }}">
+                    <img alt="Medicines" src="{{ url_for('static',filename='images/images/medicine.png') }}">
+                    <span>Medicine</span>
+                </a>
+                <!--box
+                <a class="category-box" href="{{ url_for('BabyCare') }}">
+                    <img alt="Baby Care Products" src="{{ url_for('static',filename='images/images/baby.png') }}">
+                    <span>Baby Care</span>
+                </a>--------------->
+                <!--box---------------->
+                <a class="category-box" href ="{{ url_for('OfficeCategory') }}">
+                    <img alt="Fish" src="{{ url_for('static',filename='images/images/office.png') }}">
+                    <span>Stationary</span>
+                </a>
+                <!--box---------------->
+                <a class="category-box" href ="{{ url_for('BeautyCategory') }}">
+                    <img alt="Beauty Products" src="{{ url_for('static',filename='images/images/beauty.png') }}">
+                    <span>Beauty</span>
+                </a>
+                <!--box
+                <a class="category-box" href = "{{ url_for('Gardening') }}">
+                    <img alt="Gardening Products" src="{{ url_for('static',filename='images/images/Gardening.png') }}">
+                    <span>Gardening</span>
+                </a>---------------->
+            </div>
+            
+        </section>
+        <!--category-end----------------------------------->
+        <!--==Products====================================-->
+        <section id="popular-product">
+            <!--heading----------->
+            <div class="product-heading">
+                <h3>Popular Product</h3>
+                <span>All</span>
+            </div>
+            <!--box-container------>
+            <div class="product-container">
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="apple" src="{{ url_for('static',filename='images/images/apple.png') }}">
+                    <strong name="potato">Apple</strong>
+                    <span class="quantity" id="quantity">2 KG</span>
+                    <span class="price" id="price">Rs. 100</span>
+                    <!--cart-btn------->
+                    <a href="{{ url_for('FruitsCatgory') }}" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Available
+                    </a>
+                    <!--like-btn------->
+                    <a class="like-btn">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+            
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="apple" src="{{ url_for('static',filename='images/images/chili.png') }}">
+                    <strong name="potato">chilli</strong>
+                    <span class="quantity" id="quantity">2  KG</span>
+                    <span class="price" id="price">Rs. 80</span>
+                    <!--cart-btn------->
+                    <a href="{{ url_for('FruitsCatgory') }}" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Available
+                    </a>
+                    <!--like-btn------->
+                    <a class="like-btn">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                    <!--like-btn------->
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="onion" src="{{ url_for('static',filename='images/images/onion.png') }}">
+                    <strong name="potato">onion</strong>
+                    <span class="quantity" id="quantity">1 KG</span>
+                    <span class="price" id="price">Rs. 50</span>
+                    <!--cart-btn------->
+                    <a href="{{ url_for('FruitsCatgory') }}" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Available
+                    </a>
+                    <!--like-btn------->
+                    <a class="like-btn">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="apple" src="{{ url_for('static',filename='images/images/patato.png') }}">
+                    <strong name="potato">Potato</strong>
+                    <span class="quantity" id="quantity">1 KG</span>
+                    <span class="price" id="price">Rs. 60</span>
+                    <!--cart-btn------->
+                    <a href="{{ url_for('FruitsCatgory') }}" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Available
+                    </a>
+                    <!--like-btn------->
+                    <a class="like-btn">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="apple" src="{{ url_for('static',filename='images/images/garlic.png') }}">
+                    <strong name="garlic">Garlic</strong>
+                    <span class="quantity" id="quantity">1 KG</span>
+                    <span class="price" id="price">Rs. 50</span>
+                    <!--cart-btn------->
+                    <a href="#" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Available
+                    </a>
+                    <!--like-btn------->
+                    <a class="like-btn">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="apple" src="{{ url_for('static',filename='images/images/tamato.png') }}">
+                    <strong name="tomato">Tomato</strong>
+                    <span class="quantity" id="quantity">1 KG</span>
+                    <span class="price" id="price">Rs. 80</span>
+                    <!--cart-btn------->
+                    <a href="{{ url_for('FruitsCatgory') }}" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Available
+                    </a>
+                    <!--like-btn------->
+                    <a class="like-btn">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <br>
+       
+        <!--popular-product-end--------------------->
+        <!--Popular-bundle-pack===================================-->
+        <section id="popular-bundle-pack">
+            <!--heading-------------->
+            <!--popular-product-end--------------------->
+        <!--Popular-bundle-pack===================================-->
+        <section id="popular-bundle-pack">
+            <!--heading-------------->
+            <div class="product-heading">
+                <h3>Medicines</h3>
+            </div>
+            <!--box-container------>
+            <div class="product-container">
+                <!--box---------->
+                <div class="product-box" style = "height: 95%;">
+                    <img alt="Cetirizine" src="{{ url_for('static',filename='images/Cetirizine.jpg') }}">
+                    <strong>Cetirizine 10mg</strong>
+                    <span class="quantity">10 Tablets</span>
+                    <span class="price">Rs. 16.10</span>
+                    <!--cart-btn------->
+                    <a href="{{ url_for('MedicineCategory') }}" class="cart-btn" style = 'text-decoration: none;'>
+                        <i class="fas fa-shopping-bag"></i> Available
+                    </a>
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <div class="product-box" style="height: 95%;">
+                    <img alt="Cheston Cold" src="{{ url_for('static',filename='images/Cheston Cold.jpg') }}">
+                    <strong>Cheston Cold </strong>
+                    <span class="quantity">10 Tablets</span>
+                    <span class="price">Rs. 34</span>
+                    <!--cart-btn------->
+                    <a href="{{ url_for('MedicineCategory') }}" class="cart-btn" style = 'text-decoration: none;'>
+                        <i class="fas fa-shopping-bag"></i> Available
+                    </a>
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                    <!--cart-btn------->
+                    <!--like-btn------->
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="CUFRIL-D Cough Syrup" src="{{ url_for('static',filename='images/CUFRIL-D cough syrup.jpg') }}">
+                    <strong>CUFRIL-D Cough Syrup</strong>
+                    <span class="quantity"></span>
+                    <span class="price">Rs. 88</span>
+                    <!--cart-btn------->
+                    <a href="{{ url_for('MedicineCategory') }}" class="cart-btn" style = 'text-decoration: none;'>
+                        <i class="fas fa-shopping-bag"></i> Available
+                    </a>
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                    <!--cart-btn------->
+                    <!--like-btn------->
+                </div>
+            </section>
+                    
+            
+           
+    </form>
+        <!--popular-bundle-pack-end-------------------------------->
+        <!--==Clients===============================================-->
+        <section id="clients">
+            <!--heading---------------->
+            <div class="client-heading">
+                <h3>What Our Clients Say</h3>
+            </div>
+            <!--box-container---------->
+            <div class="client-box-container">
+                <!--box------------->
+                <div class="client-box">
+                    <!--==profile===-->
+                    <div class="client-profile">
+                        <!--img--->
+                        <img alt="client" src="{{ url_for('static',filename='images/Person 2.jpg') }}">
+                        <!--text-->
+                        <div class="profile-text">
+                            <strong>James Mcavoy</strong>
+                            <span>CEO</span>
+                        </div>
+                    </div>
+                    <!--==Rating======-->
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <!--==comments===-->
+                    <p>Product Finder is the best. PF never fails to dissapoint me. Grocery shopping has become so easy with Product Finder.</Str></p>
+                </div>
+                <!--box------------->
+                <div class="client-box">
+                    <!--==profile===-->
+                    <div class="client-profile">
+                        <!--img--->
+                        <img alt="client" src="{{ url_for('static',filename='images/Person 4.jpg') }}">
+                        <!--text-->
+                        <div class="profile-text">
+                            <strong>Sameer Sharma</strong>
+                            <span>Software Developer</span>
+                        </div>
+                    </div>
+                    <!--==Rating======-->
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <!--==comments===-->
+                    <p>Product Finder is just amazing. I can buy all my products from a single place. All rhe products are available at very affordable prices. And, the products are delivered at the time slot you choose and prefer.</p>
+                </div>
+                <!--box------------->
+                <div class="client-box">
+                    <!--==profile===-->
+                    <div class="client-profile">
+                        <!--img--->
+                        <img alt="client" src="{{ url_for('static',filename='images/Person 3.jpg') }}">
+                        <!--text-->
+                        <div class="profile-text">
+                            <strong>Ava Adam's</strong>
+                            <span>Marketer</span>
+                        </div>
+                    </div>
+                    <!--==Rating======-->
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <!--==comments===-->
+                    <p>At Product Finder, you can get fresh fruits and vegetables. And it is not only about fruits or vegetables, you can buy all kinds of stuff here.</p>
+                </div>
+            </div>
+        </section>
+        <!--client-section-end---------->
+        <!--==Partnre-logo================================-->
+        
+        <!--logo-section-end--------------------->
+        <!--==download-app====================================-->
+        
+        <!--download-app-section-end------------------------->
+        <!--==Footer=============================================-->
+        <footer>
+           
+                <!--links------------------------->
+            <div class="footer-links">
+                <strong>Product</strong>
+                <ul>
+                    <li><a href="#">Grocery</a></li>
+                    <li><a href="#">Packages</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">New</a></li>
+                </ul>
+            </div>
+            <!--links------------------------->
+            <div class="footer-links">
+                <strong>Category</strong>
+                <ul>
+                    <li><a href="#">Beauty</a></li>
+                    <li><a href="#">Vegetables</a></li>
+                    <li><a href="#">Baby</a></li>
+                    <li><a href="#">Medicine</a></li>
+                </ul>
+            </div>
+            <!--links-------------------------->
+            <div class="footer-links">
+                <strong>Contact</strong>
+                <ul>
+                    <li><a href="#">Phone : +123456789</a></li>
+                    <li><a href="#">Email : productfinder69@gmail.com</a></li>
+                    <li><a href="#">Cities we serve</a></li>
+                </ul>
+				<br><p style="color: aliceblue;">Copyright ©2022 | All Rights Reserved</p>
+            </div>
+            </div>
+        </footer>
+    </body>
+</html>

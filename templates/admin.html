@@ -1,0 +1,94 @@
+<!Doctype HTML>
+<html>
+<head>
+	<title>ADMIN</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style6.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+	
+	<div id="mySidenav" class="sidenav">
+	<p class="logo"><span></span>PRODUCT FINDER</p>
+  <!--<a href="{{url_for('user')}}" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;HOME</a>-->
+  <a href="{{url_for('storeadder')}}" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Add Storedetails</a>
+  <a href="{{url_for('Feedbackdetails')}}" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Feedbackdetails</a>
+  <a href="{{url_for('pricedetails')}}" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Show Pricedetails</a>
+</div>
+<div id="main">
+
+	<div class="head">
+		<div class="col-div-6">
+
+<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >&#9776; Dashboard</span>
+</div>
+	
+
+		
+		<div class="clearfix"></div>
+</div>
+
+	<div class="clearfix"></div>
+	
+	<div class="clearfix"></div>
+
+	<div class="col-div-8">
+		<div class="box-8">
+		<div class="content-box">
+			<p>USER DETAILS</p>
+			<br/>
+			<table>
+  <tr>
+    <th>USERNAME</th>
+    <th>PASSWORD</th>
+    <th>EMAIL</th>
+  </tr>
+  {% for row in account_data %}
+  <tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}</td>
+  </tr>
+  {% endfor %}  
+  
+
+</table>
+</br>
+<p>STORE DETAILS</p>
+<br>
+<table>
+  <tr>
+    <th>STORENAME</th>
+    <th>OWNER</th>
+    <th>PRODUCT CATEGORY</th>
+    <th>PLACE</th>
+    <th>PHONE NO</th>
+    <th>ADDRESS</th>
+    <th>PRODUCT</th>
+  </tr>
+  {% for row in store_data %}
+  <tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}</td>
+    <td>{{ row[3] }}</td>
+    <td>{{ row[4] }}</td>
+    <td>{{ row[5] }}</td>
+    <td>{{ row[6] }}</td>
+  </tr>
+  {% endfor %}  
+  
+
+</table>
+		</div>
+	</div>
+	</div>
+</div>
+
+
+
+</body>
+
+
+</html>

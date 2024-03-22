@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+  <title>Registration Form Using HTML/CSS</title>
+</head>
+<body>
+    <!-- Container Start -->
+      <!-- Form Wrap Start -->
+      <div class="form-wrap">
+        <h1>SIGN UP</h1>
+        <!-- Form Start -->
+        <form action="{{ url_for('register') }}" method="post">
+          <div class="form-group">
+            <input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/>
+          </div>
+          <div class="form-group">
+            <input id="password" name="password" type="password" placeholder="Enter your Password" class="textbox"/>
+          </div>
+          <div class="form-group">
+            <input id="email" name="email" type="email" placeholder="Email" class="textbox"/>
+          </div>
+          <input type="submit"  name="Sign Up" value="SIGN UP">
+        <!-- Form Close -->
+      <!-- Form Wrap Close -->
+        <div class="signup_link">
+        <p class="bottom">Already have an account? <a class="bottom" href="{{url_for('login')}}"> Sign In here</a></p>
+        </div>
+      </form>
+      </div>
+    <!-- Container Close -->
+</body>
+</html>

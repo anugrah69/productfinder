@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+
+        <meta charset="utf-8">
+
+        <title>
+            
+            Contact Form
+        
+        </title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='Contact Form CSS.css') }}">
+        
+        <link rel="shortcut icon" type="image/jpg" href="C:\Users\hp\Desktop\College\First Semester\Introduction To Web Technologies\Notepad ++ Files\Project\favicon.ico"/>
+
+        <script src="{{url_for('static',filename='Contact Form JS.js')}}"></script>
+
+    </head>
+
+    <body>
+        <div class="background">
+            
+        </div>
+
+        <div class="wrapper">
+
+            <h2 align = 'center'>
+                
+                Contact Form
+        
+            </h2>
+
+            <div id="error_message"></div>
+            <form action="{{ url_for('feedback') }}" method="post">
+            
+
+                <div class="input_field">
+
+                    <input id="Name" name="Name" type="text" placeholder="Enter youre Name" >
+
+                </div>
+                
+                <div class="input_field">
+
+                    <input id="Email" name="Email" type="text" placeholder="Email" >
+
+                </div>
+
+                <div class="input_field">
+
+                    <textarea id="Message" name="Message" placeholder="Message" ></textarea>
+
+                </div>
+
+                <button type="submit" class="btn">
+                    
+                    
+                        
+                        Submit
+                    
+                    </a>
+                
+                </button>
+
+            </form>
+
+        </div>
+
+    </body>
+
+</html>

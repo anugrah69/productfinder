@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='error.css') }}">
+</head>
+<body>
+
+    <h5>Cannot Find The Product !</h5>
+    <h1>5</h1>
+    <h1>00</h1>
+    <div class="box">
+			<span></span><span></span>
+			<span></span><span></span>
+			<span></span>
+		</div>
+    <div class="box">
+			<span></span><span></span>
+			<span></span><span></span>
+			<span></span>
+		</div>
+    <p> We're unable to find out what's you type! We suggest you to
+			<br/>
+			<a target="_blank" href="{{url_for('user')}}">Go Back</a>
+			or visit here later.</p>
+</body>
+</html>

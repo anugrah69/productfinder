@@ -1,0 +1,59 @@
+<!Doctype HTML>
+<html>
+<head>
+	<title>ADMIN</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='pup.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+	<div id="main">
+
+	<div class="head">
+		<div class="col-div-6">
+
+<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >&#9776; Dashboard</span>
+</div>
+	
+
+		
+		<div class="clearfix"></div>
+</div>
+
+	<div class="clearfix"></div>
+	
+	<div class="clearfix"></div>
+
+	<div class="col-div-8">
+		<div class="box-8">
+		<div class="content-box">
+			<p>PRICE DETAILS</p>
+			<br/>
+			<table>
+  <form action="{{url_for('priceupdater')}}" method="post">
+  
+  <tr>
+    <select style=" background-color: #973abf; border: 15px;" id="s1" name="s1" >
+        {% for row in data %}
+        <option value="{{ row[1] }}">{{ row[1] }}</option>
+        {% endfor %}
+        <input type="text" id="p1" name="p1" >
+    
+  </tr>
+    
+ <input type="submit" value="submit">
+</form>
+</table>
+		</div>
+	</div>
+	</div>
+</div>
+
+
+
+
+</body>
+
+
+</html>
